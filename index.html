@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Casino Zeus - Redirigiendo...</title>
-    <meta name="description" content="Bienvenido a Casino Zeus - Tu casino online de confianza">
+    <title>Acceso a la plataforma</title>
+    <meta name="description" content="Estás siendo dirigido de forma segura a la plataforma correspondiente para continuar con el proceso.">
+    <meta property="og:title" content="Acceso a la plataforma">
+    <meta property="og:description" content="Estás siendo dirigido de forma segura a la plataforma correspondiente para continuar con el proceso.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
     <style>
         * {
             margin: 0;
@@ -20,241 +24,170 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #fff;
-            overflow: hidden;
-            position: relative;
+            color: #333;
+            padding: 2rem;
         }
 
         .container {
-            text-align: center;
-            padding: 2rem;
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 3rem;
             max-width: 600px;
-            z-index: 10;
-        }
-
-        .logo {
-            font-size: 3.5rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
-            background: linear-gradient(45deg, #ffd700, #ffed4e);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: fadeInDown 0.8s ease-out;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            opacity: 0.9;
-            animation: fadeInUp 0.8s ease-out 0.1s both;
-        }
-
-        .message {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-            animation: fadeInUp 0.8s ease-out 0.2s both;
-        }
-
-        .spinner {
-            border: 4px solid rgba(255,255,255,0.3);
-            border-top: 4px solid #ffd700;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 2rem;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .link-button {
-            display: inline-block;
-            padding: 15px 40px;
-            background: linear-gradient(45deg, #ffd700, #ffed4e);
-            border: none;
-            border-radius: 50px;
-            color: #1e3c72;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255,215,0,0.4);
-            animation: fadeInUp 0.8s ease-out 0.4s both;
-        }
-
-        .link-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255,215,0,0.6);
-            background: linear-gradient(45deg, #ffed4e, #ffd700);
-        }
-
-        .background-animation {
-            position: fixed;
-            top: 0;
-            left: 0;
             width: 100%;
-            height: 100%;
-            z-index: 1;
-            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            text-align: center;
         }
 
-        .particle {
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(255,215,0,0.3);
-            animation: float 15s infinite ease-in-out;
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #333;
         }
 
-        .particle:nth-child(1) {
-            width: 250px;
-            height: 250px;
-            top: -125px;
-            left: -125px;
-            animation-delay: 0s;
+        .text-section {
+            margin-bottom: 1.5rem;
         }
 
-        .particle:nth-child(2) {
-            width: 180px;
-            height: 180px;
-            bottom: -90px;
-            right: -90px;
-            animation-delay: 3s;
+        .text-section p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 1rem;
         }
 
-        .particle:nth-child(3) {
-            width: 120px;
-            height: 120px;
-            top: 30%;
-            right: -60px;
-            animation-delay: 6s;
+        .countdown {
+            font-size: 0.95rem;
+            color: #1e3c72;
+            font-weight: 500;
+            margin-bottom: 2rem;
         }
 
-        .particle:nth-child(4) {
-            width: 100px;
-            height: 100px;
-            bottom: 20%;
-            left: -50px;
-            animation-delay: 9s;
+        .button {
+            display: inline-block;
+            padding: 16px 40px;
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 1.5rem;
         }
 
-        @keyframes float {
-            0%, 100% {
-                transform: translate(0, 0) scale(1) rotate(0deg);
-            }
-            25% {
-                transform: translate(80px, 80px) scale(1.1) rotate(90deg);
-            }
-            50% {
-                transform: translate(-40px, 40px) scale(0.9) rotate(180deg);
-            }
-            75% {
-                transform: translate(60px, -30px) scale(1.05) rotate(270deg);
-            }
+        .button:hover {
+            background: linear-gradient(45deg, #2a5298, #1e3c72);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(30, 60, 114, 0.4);
         }
 
-        .sparkle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: #ffd700;
-            border-radius: 50%;
-            animation: sparkle 2s infinite;
+        .button:active {
+            transform: translateY(0);
         }
 
-        @keyframes sparkle {
-            0%, 100% {
-                opacity: 0;
-                transform: scale(0);
-            }
-            50% {
-                opacity: 1;
-                transform: scale(1);
-            }
+        .trust-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            color: #666;
+        }
+
+        .trust-indicators span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-text {
+            font-size: 0.875rem;
+            color: #999;
+            margin-top: 1.5rem;
+            line-height: 1.5;
         }
 
         @media (max-width: 768px) {
-            .logo {
-                font-size: 2.5rem;
+            .container {
+                padding: 2rem 1.5rem;
             }
-            .message {
-                font-size: 1.2rem;
+
+            h1 {
+                font-size: 1.75rem;
             }
-            .subtitle {
-                font-size: 1rem;
+
+            .text-section p {
+                font-size: 0.95rem;
+            }
+
+            .trust-indicators {
+                flex-direction: column;
+                gap: 0.75rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="background-animation">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-    </div>
-
     <div class="container">
-        <h1 class="logo">⚡ CASINO ZEUS ⚡</h1>
-        <p class="subtitle">Tu Casino Online de Confianza</p>
-        <p class="message">Redirigiendo a nuestro casino...</p>
-        <div class="spinner"></div>
-        <a href="https://casino-zeus.cloud/" class="link-button">Entrar al Casino</a>
+        <h1>Acceso a la plataforma</h1>
+        
+        <div class="text-section">
+            <p>Estás siendo dirigido de forma segura a la plataforma correspondiente para continuar con el proceso.</p>
+            <p>Por motivos de organización y seguridad, el acceso se realiza a través de este paso intermedio.</p>
+        </div>
+
+        <div class="text-section">
+            <p>La redirección se realizará automáticamente en unos segundos.<br>Si preferís continuar de inmediato, también podés hacerlo de forma manual.</p>
+        </div>
+
+        <div class="countdown" id="countdown">Redirigiendo en <span id="timer">5</span> segundos…</div>
+
+        <a href="https://casino-zeus.cloud/" class="button" id="accessButton">Continuar ahora</a>
+
+        <div class="trust-indicators">
+            <span>🔒 Conexión segura</span>
+            <span>🌐 Acceso verificado</span>
+        </div>
+
+        <div class="text-section">
+            <p>Este proceso no requiere descargas ni instalaciones adicionales.<br>Solo te redirigimos al sitio correcto para que continúes con normalidad.</p>
+        </div>
+
+        <p class="footer-text">Si la redirección automática no se completa, utilizá el botón para continuar.</p>
     </div>
 
     <script>
-        // Crear efectos de brillo aleatorios
-        function createSparkle() {
-            const sparkle = document.createElement('div');
-            sparkle.className = 'sparkle';
-            sparkle.style.left = Math.random() * 100 + '%';
-            sparkle.style.top = Math.random() * 100 + '%';
-            sparkle.style.animationDelay = Math.random() * 2 + 's';
-            document.body.appendChild(sparkle);
-            
-            setTimeout(() => {
-                sparkle.remove();
-            }, 2000);
+        var targetUrl = 'https://casino-zeus.cloud/';
+        var secondsLeft = 5;
+        var timerElement = document.getElementById('timer');
+        var countdownElement = document.getElementById('countdown');
+        var redirectTimer;
+
+        // Actualizar contador
+        function updateTimer() {
+            timerElement.textContent = secondsLeft;
+            if (secondsLeft <= 0) {
+                clearInterval(redirectTimer);
+                countdownElement.textContent = 'Redirigiendo...';
+                window.location.href = targetUrl;
+            }
+            secondsLeft--;
         }
 
-        // Crear brillos periódicamente
-        setInterval(createSparkle, 300);
+        // Iniciar contador
+        redirectTimer = setInterval(updateTimer, 1000);
 
-        // Redirección automática después de 2 segundos
-        setTimeout(function() {
-            window.location.href = 'https://casino-zeus.cloud/';
-        }, 2000);
-
-        // Redirección inmediata al hacer clic en cualquier parte
-        document.addEventListener('click', function() {
-            window.location.href = 'https://casino-zeus.cloud/';
+        // Botón manual
+        document.getElementById('accessButton').addEventListener('click', function(e) {
+            e.preventDefault();
+            clearInterval(redirectTimer);
+            window.location.href = targetUrl;
         });
     </script>
 </body>
