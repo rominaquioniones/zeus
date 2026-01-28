@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Acceso a la plataforma</title>
-    <meta name="description" content="Estás siendo dirigido de forma segura a la plataforma correspondiente para continuar con el proceso.">
+    <meta name="description" content="Estás a un paso de continuar.">
     <meta property="og:title" content="Acceso a la plataforma">
-    <meta property="og:description" content="Estás siendo dirigido de forma segura a la plataforma correspondiente para continuar con el proceso.">
+    <meta property="og:description" content="Estás a un paso de continuar.">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary">
     <style>
@@ -19,116 +19,88 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%);
+            background: linear-gradient(135deg, #000000 0%, #1a0033 50%, #000033 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #333;
+            color: #ffffff;
             padding: 2rem;
+            overflow: hidden;
         }
 
         .container {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 3rem;
-            max-width: 600px;
-            width: 100%;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
             text-align: center;
+            max-width: 500px;
+            width: 100%;
         }
 
         h1 {
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: #333;
-        }
-
-        .text-section {
-            margin-bottom: 1.5rem;
-        }
-
-        .text-section p {
-            font-size: 1rem;
-            line-height: 1.7;
-            color: #555;
+            font-size: 2.5rem;
+            font-weight: 700;
             margin-bottom: 1rem;
+            color: #ffffff;
+            letter-spacing: -0.5px;
         }
 
-        .countdown {
-            font-size: 0.95rem;
-            color: #1e3c72;
-            font-weight: 500;
-            margin-bottom: 2rem;
+        .subtitle {
+            font-size: 1.1rem;
+            color: #b8b8b8;
+            margin-bottom: 3rem;
+            font-weight: 400;
         }
 
         .button {
             display: inline-block;
-            padding: 16px 40px;
-            background: linear-gradient(45deg, #1e3c72, #2a5298);
+            padding: 18px 50px;
+            background: linear-gradient(135deg, #6c5ce7 0%, #4834d4 100%);
             color: #ffffff;
             text-decoration: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
+            border-radius: 12px;
+            font-size: 1.2rem;
             font-weight: 600;
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
-            width: 100%;
-            max-width: 300px;
-            margin-bottom: 1.5rem;
+            box-shadow: 0 8px 24px rgba(108, 92, 231, 0.3);
+            margin-bottom: 2rem;
         }
 
         .button:hover {
-            background: linear-gradient(45deg, #2a5298, #1e3c72);
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(30, 60, 114, 0.4);
+            box-shadow: 0 12px 32px rgba(108, 92, 231, 0.4);
+            background: linear-gradient(135deg, #7b6ee8 0%, #5a4dd5 100%);
         }
 
         .button:active {
             transform: translateY(0);
         }
 
-        .trust-indicators {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
-            font-size: 0.875rem;
+        .redirect-text {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .footer {
+            font-size: 0.85rem;
             color: #666;
-        }
-
-        .trust-indicators span {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .footer-text {
-            font-size: 0.875rem;
-            color: #999;
-            margin-top: 1.5rem;
-            line-height: 1.5;
+            margin-top: 2rem;
         }
 
         @media (max-width: 768px) {
-            .container {
-                padding: 2rem 1.5rem;
-            }
-
             h1 {
-                font-size: 1.75rem;
+                font-size: 2rem;
             }
 
-            .text-section p {
-                font-size: 0.95rem;
+            .subtitle {
+                font-size: 1rem;
             }
 
-            .trust-indicators {
-                flex-direction: column;
-                gap: 0.75rem;
+            .button {
+                padding: 16px 40px;
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -136,57 +108,29 @@
 <body>
     <div class="container">
         <h1>Acceso a la plataforma</h1>
+        <p class="subtitle">Estás a un paso de continuar.</p>
         
-        <div class="text-section">
-            <p>Estás siendo dirigido de forma segura a la plataforma correspondiente para continuar con el proceso.</p>
-            <p>Por motivos de organización y seguridad, el acceso se realiza a través de este paso intermedio.</p>
-        </div>
-
-        <div class="text-section">
-            <p>La redirección se realizará automáticamente en unos segundos.<br>Si preferís continuar de inmediato, también podés hacerlo de forma manual.</p>
-        </div>
-
-        <div class="countdown" id="countdown">Redirigiendo en <span id="timer">5</span> segundos…</div>
-
-        <a href="https://casino-zeus.cloud/" class="button" id="accessButton">Continuar ahora</a>
-
-        <div class="trust-indicators">
-            <span>🔒 Conexión segura</span>
-            <span>🌐 Acceso verificado</span>
-        </div>
-
-        <div class="text-section">
-            <p>Este proceso no requiere descargas ni instalaciones adicionales.<br>Solo te redirigimos al sitio correcto para que continúes con normalidad.</p>
-        </div>
-
-        <p class="footer-text">Si la redirección automática no se completa, utilizá el botón para continuar.</p>
+        <a href="https://casino-zeus.cloud/" class="button" id="accessButton">Ingresar</a>
+        
+        <p class="redirect-text" id="redirectText">Redirigiendo automáticamente…</p>
+        
+        <p class="footer">🔒 Conexión segura · Acceso verificado</p>
     </div>
 
     <script>
         var targetUrl = 'https://casino-zeus.cloud/';
-        var secondsLeft = 5;
-        var timerElement = document.getElementById('timer');
-        var countdownElement = document.getElementById('countdown');
+        var redirectText = document.getElementById('redirectText');
         var redirectTimer;
 
-        // Actualizar contador
-        function updateTimer() {
-            timerElement.textContent = secondsLeft;
-            if (secondsLeft <= 0) {
-                clearInterval(redirectTimer);
-                countdownElement.textContent = 'Redirigiendo...';
-                window.location.href = targetUrl;
-            }
-            secondsLeft--;
-        }
+        // Redirección automática después de 4 segundos
+        redirectTimer = setTimeout(function() {
+            window.location.href = targetUrl;
+        }, 4000);
 
-        // Iniciar contador
-        redirectTimer = setInterval(updateTimer, 1000);
-
-        // Botón manual
+        // Botón manual - redirección inmediata
         document.getElementById('accessButton').addEventListener('click', function(e) {
             e.preventDefault();
-            clearInterval(redirectTimer);
+            clearTimeout(redirectTimer);
             window.location.href = targetUrl;
         });
     </script>
